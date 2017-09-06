@@ -50,18 +50,6 @@ gulp.task('bs', () => {
     });
 });
 
-const historyApiFallback = require('connect-history-api-fallback');
-
-gulp.task('bs', () => {
-    browserSync.init({
-        server: {
-            baseDir: './'
-        },
-        middleware: [historyApiFallback()] // <-- add this line
-    });
-});
-
-
 // default to run gulp
 gulp.task('default', ['js','bs', 'styles'], () => {
     gulp.watch('dev/**/*.js',['js']);
