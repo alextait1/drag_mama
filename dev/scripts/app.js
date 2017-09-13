@@ -11,6 +11,18 @@ import {
 
 
 
+
+
+  var config = {
+    apiKey: "AIzaSyDW4Z0ZL5ZaEORasgzuq4xrsZAcGQ5tq1g",
+    authDomain: "whosyourdragmother.firebaseapp.com",
+    databaseURL: "https://whosyourdragmother.firebaseio.com",
+    projectId: "whosyourdragmother",
+    storageBucket: "whosyourdragmother.appspot.com",
+    messagingSenderId: "150415880279"
+  };
+  firebase.initializeApp(config);
+
 const highQueenIds= {
 	bebe:12,
 	tyra:24,
