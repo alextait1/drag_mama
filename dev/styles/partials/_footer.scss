@@ -1,0 +1,52 @@
+footer{
+	display: flex;
+	justify-content:space-between;
+	background: $ruPink;
+	margin-top:50px;
+	@include respond-to(small){
+		flex-direction:column;
+		justify-content:center;
+	}
+	.flex__child-left,
+	.flex__child-right{
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		width:30%;
+		padding-right:30px;
+		padding-left:30px;
+		@include respond-to(small){
+			width:100%;
+		}
+	}
+	.flex__child{
+		display: flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		width:40%;
+		@include respond-to(small){
+			width:100%;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+	img{
+		width:100px;
+		height:100px;
+	}
+	p{
+		color:white;
+		@include respond-to(medium){
+			font-size: 14px;
+		}
+		@include respond-to(small){
+			margin:0;
+		}
+	}
+	.twitter-share-button{
+		@include respond-to(small){
+			margin-top: 10px;
+		}
+	}
+}

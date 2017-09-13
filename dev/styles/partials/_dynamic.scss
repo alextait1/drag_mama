@@ -1,0 +1,33 @@
+.dynamic__container {
+	display:none;
+	&.show{
+		display: flex;
+		flex-direction:row;
+		height:100vh;
+	}
+}
+
+.dynamic__left{
+	width:calc(40% - 20px);
+	border: 15px solid $ruPink;
+	border-radius:15px;
+	padding: 100px;
+	background: black;
+}
+
+.dynamic__right{
+	width:60%;
+	padding-left: 50px;
+}
+
+.drag{
+	font-family: $headerFont;
+	font-size: 40px;
+	color: $ruPink;
+}
+
+.orange_text2{
+	color:$ruOrange;
+	font-size: 30px;
+}
+

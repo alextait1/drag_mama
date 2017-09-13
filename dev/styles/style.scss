@@ -1,5 +1,8 @@
-.rupaul{
-	width: 40%;
-	border: 5px solid pink;
-	border-radius: 10px;
-}
+@import "partials/normalize";
+@import "partials/_mixins";
+@import "partials/variables";
+@import "partials/global";
+@import "partials/form";
+@import "partials/header";
+@import "partials/dynamic";
+@import "partials/footer";

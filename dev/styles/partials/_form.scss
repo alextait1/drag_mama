@@ -1,0 +1,50 @@
+.form{
+	display: flex;
+	flex-direction:column;
+	padding: 50px;
+}
+
+input[type=submit]{
+	border:none;
+	border:3px solid $ruPurple;
+	border-radius: 40px;
+	background: white;
+	color:$ruPurple;
+	padding:10px 20px 10px 20px;
+	font-size: 20px;
+	&:hover{
+		background: $ruPink;
+	}
+}
+
+
+
+label {
+	padding-right:10px;
+	font-size: 20px;
+}
+
+.input__container{
+	display: flex;
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+
+.question{
+	display:none;
+	&.show{
+		display: flex;
+		flex-direction:column;
+	}
+}
+
+.next{
+	margin-top: 20px;
+	max-width:200px;
+
+}
+
+.orange_text{
+	color:$ruOrange;
+	font-size: 20px;
+}
