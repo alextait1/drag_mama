@@ -67,7 +67,7 @@ class App extends React.Component {
 			url: 'https://proxy.hackeryou.com',
 			data: {
 				reqUrl:`http://nokeynoshade.party/api/queens/${id}`,
-			},
+				},
 			method: 'GET',
 			dataType: 'json'
 		}).then((res)=>{
@@ -75,7 +75,7 @@ class App extends React.Component {
 				queenName: res.name,
 				queenImg:res.image_url,
 				queenQuote:res.quote	
-			})
+				})
 			console.log(res)
 		})
 	}
@@ -86,19 +86,16 @@ class App extends React.Component {
 		let myPage = page +1
 		this.setState({
 			page: myPage
-		})
-		console.log(this.state.page)
+			})
 	}
 
 	handleChange(event){
 		
 		const radioState = Object.assign(this.state.radio);
-		console.log(radioState[event.target.name])
 		radioState[event.target.name] = event.target.dataset.queens;
-		console.log(event.target.dataset.queens);
 		this.setState({
 			radio: radioState
-		});
+			});
 	}
 
 	handleSubmit(event){
@@ -107,10 +104,8 @@ class App extends React.Component {
 		for (let answer in answers) {
 		    let result = answers[answer].split(',');
 			result.forEach((queenName)=>{
-				console.log(queenName)
 				let queensScore = this.state.queensScore;
 				queensScore[queenName] +=1;
-				console.log(queensScore);
 				this.setState({
 					queensScore: queensScore
 			})	
@@ -123,17 +118,15 @@ class App extends React.Component {
     let highQueen='';
     let queensScore = this.state.queensScore
     for (let queen in queensScore){
-    	if (queensScore[queen] >= highScore) {
+    	if (queensScore[queen] >= highScore){
     		highScore = queensScore[queen]
     		highQueen = queen
     		}
    		} 
-    	console.log(highScore, highQueen)
-   		console.log('queenId', highQueenIds[highQueen]) 
     	this.getQueen(highQueenIds[highQueen])
     	this.setState({
     		yourQueen: highQueen
-    		})   
+    	})   
 	}
 
 	startQuiz(){
@@ -144,8 +137,6 @@ class App extends React.Component {
 			queenName: '',
 			queenQuote: ''
 		})
-
-
 	}
 
 	render (){

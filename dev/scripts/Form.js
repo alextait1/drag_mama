@@ -1,13 +1,7 @@
 import React from 'react';
 
 class Form extends React.Component {
-
-	// const loadQueenInfo(event){
-	// 	// let queenData = event.
-	// }
 	render (){
-		console.log("props",this.props)
-		console.log(this.props.radioState.qOne === "sharon")
 		return (
 			<div className="wrapper">
 				<form onSubmit={this.props.handleSubmit} className="form" id="formxs">
@@ -38,10 +32,8 @@ class Form extends React.Component {
 						</div>
 				
 						<button onChange={this.props.handleChange} onClick={this.props.handleClick} className="next">Next Question</button>
-				
-						{/* onChange handler give all buttons the same name in the app passed in as props to the form*/}
-				
 					</div>
+
 					<div className={this.props.page === 2 ? "show question__two question" : "question__two question"}>
 						<h3>If you were a contestant in a Miss/Mr Universe pageant, your special skill would be:</h3>
 						
@@ -131,7 +123,5 @@ class Form extends React.Component {
 	}
 }
 
-// on click of button, store user value in a variable and move to next question
-// on submit of last question tally points to reslove queen name
 
 export default Form;

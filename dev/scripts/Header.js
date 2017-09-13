@@ -1,11 +1,9 @@
 import React from 'react';
-// import scrolltoElement from 'scrollto-element';
 
 class Header extends React.Component {
 	constructor(){
 		super();
 		this.play=this.play.bind(this);
-		// this.scrolltoElement=this.bind(this);
 		this.state={
 			played:false
 		}
@@ -21,7 +19,6 @@ class Header extends React.Component {
 		this.setState({
 			played:true
 			})
-		// this.scrolltoElement(document.querySelector('#scrollQuestion'));
 		}
 	}
 
@@ -46,6 +43,5 @@ class Header extends React.Component {
 			)
 	}
 }
-
 
 export default Header;

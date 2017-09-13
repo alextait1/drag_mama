@@ -6,6 +6,7 @@ footer{
 	@include respond-to(small){
 		flex-direction:column;
 		justify-content:center;
+		padding-top: 20px;
 	}
 	.flex__child-left,
 	.flex__child-right{
