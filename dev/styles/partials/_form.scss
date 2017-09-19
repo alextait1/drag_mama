@@ -6,14 +6,16 @@
 
 input[type=submit]{
 	border:none;
-	border:3px solid $ruPurple;
+	border:3px solid $ruPink;
 	border-radius: 40px;
-	background: white;
-	color:$ruPurple;
+	background: $ruPink;
+	color:white;
 	padding:10px 20px 10px 20px;
 	font-size: 20px;
 	&:hover{
-		background: $ruPink;
+		background: $ruPurple;
+		border:3px solid $ruPurple;
+		transition: all ease-in-out 0.3s;
 	}
 }
 
@@ -50,6 +52,7 @@ label {
 .next{
 	margin-top: 20px;
 	max-width:180px;
+	font-size: 20px;
 
 }
 

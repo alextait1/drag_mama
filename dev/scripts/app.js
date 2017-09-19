@@ -8,11 +8,8 @@ import { ajax } from 'jquery';
 import { 
     BrowserRouter as Router, 
     Route, Link } from 'react-router-dom';
-
-
-
-
-
+import { scrollToElement, scrollWindowToElement } from 'scroll-element';
+ 
   var config = {
     apiKey: "AIzaSyDW4Z0ZL5ZaEORasgzuq4xrsZAcGQ5tq1g",
     authDomain: "whosyourdragmother.firebaseapp.com",
@@ -72,6 +69,7 @@ class App extends React.Component {
 		this.handleClick = this.handleClick.bind(this);
 		this.getQueen = this.getQueen.bind(this);
 		this.startQuiz =this.startQuiz.bind(this);
+		
 	};	
 
 	getQueen(id){
@@ -87,8 +85,14 @@ class App extends React.Component {
 				queenName: res.name,
 				queenImg:res.image_url,
 				queenQuote:res.quote	
-				})
+				}, () => {
+					console.log('scrolling down')
+					const targetElement = document.getElementById('quote');
+					scrollWindowToElement(targetElement, 1000, -300);
+
+				});
 			console.log(res)
+
 		})
 	}
 
@@ -141,14 +145,22 @@ class App extends React.Component {
     	})   
 	}
 
-	startQuiz(){
-		console.log("starting")
+
+
+	startQuiz(restart){
+		
+		if (restart === true) {
+				setTimeout(function() {
+					console.log('scrolling');
+					window.scroll({top: 0, behavior: 'smooth'});
+				}, 0);			
+		}
 		this.setState({
 			page: 1,
 			queenImg: '',
 			queenName: '',
 			queenQuote: ''
-		})
+		});
 	}
 
 	render (){
@@ -156,17 +168,18 @@ class App extends React.Component {
 			<div>
 				<Header startQuiz={this.startQuiz}/>
 				<Form 
-				handleChange={this.handleChange}
-				handleSubmit={this.handleSubmit}
-				radioState={this.state.radio} 
-				handleClick={this.handleClick}
-				page={this.state.page}
+					handleChange={this.handleChange}
+					handleSubmit={this.handleSubmit}
+					radioState={this.state.radio} 
+					handleClick={this.handleClick}
+					page={this.state.page}
+					getQueen={this.getQueen}
 				/>
 				<Dynamic 
-				queenName={this.state.queenName} 
-				queenImg={this.state.queenImg}
-				queenQuote={this.state.queenQuote}
-				startQuiz={this.startQuiz}
+					queenName={this.state.queenName} 
+					queenImg={this.state.queenImg}
+					queenQuote={this.state.queenQuote}
+					startQuiz={this.startQuiz}
 				/>
 			</div>
 			)

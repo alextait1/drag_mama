@@ -2,6 +2,7 @@
 .header__container{
 	display: flex;
 	padding-top: 50px;
+	height:100vh;
 	@include respond-to(medium){
 		flex-direction: column;
 		padding-top: 20px;

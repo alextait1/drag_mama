@@ -1,13 +1,16 @@
 .dynamic__container {
 	display:none;
+	height:50px;
 	&.show{
 		display: flex;
 		flex-direction:row;
+		height:100vh;
 		@include respond-to(medium){
 			flex-direction: column;
 			align-items:center;
 		}
 	}
+
 }
 
 .dynamic__left{
@@ -15,6 +18,8 @@
 	border: 15px solid $ruPink;
 	border-radius:15px;
 	padding: 150px 100px 150px 100px;
+	margin-bottom: 50px;
+	margin-top: 50px;
 	background: black;
 	@include respond-to(x-large){
 		width:calc(50% - 30px);
@@ -41,6 +46,11 @@
 		text-align:center;
 	}
 }	
+.queenName{
+	font-size: 40px;
+	text-transform: uppercase;
+	color:$ruPink;
+}
 
 .drag{
 	font-family: $headerFont;
@@ -49,7 +59,7 @@
 }
 
 .orange_text2{
-	color:$ruOrange;
+	color:$ruGrey;
 	font-size: 30px;
 }
 

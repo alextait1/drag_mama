@@ -141,7 +141,7 @@ body {
   max-width: 1170px; }
 
 h2 {
-  color: #ff5100;
+  color: #333333;
   font-size: 36px; }
   @media (max-width: 940px) {
     h2 {
@@ -163,18 +163,20 @@ audio {
 
 button {
   border: none;
-  border: 3px solid #5b00aa;
+  border: 3px solid #ff008c;
   border-radius: 40px;
-  background: white;
-  color: #5b00aa;
+  background: #ff008c;
+  color: white;
   padding: 10px 20px 10px 20px;
-  font-size: 20px; }
+  font-size: 26px; }
   @media (max-width: 768px) {
     button {
       font-size: 16px;
       margin-top: 10px; } }
   button:hover {
-    background: #ff008c; }
+    background: #5b00aa;
+    border: 3px solid #5b00aa;
+    transition: all ease-in-out 0.3s; }
 
 .form {
   display: flex;
@@ -183,14 +185,16 @@ button {
 
 input[type=submit] {
   border: none;
-  border: 3px solid #5b00aa;
+  border: 3px solid #ff008c;
   border-radius: 40px;
-  background: white;
-  color: #5b00aa;
+  background: #ff008c;
+  color: white;
   padding: 10px 20px 10px 20px;
   font-size: 20px; }
   input[type=submit]:hover {
-    background: #ff008c; }
+    background: #5b00aa;
+    border: 3px solid #5b00aa;
+    transition: all ease-in-out 0.3s; }
 
 input[type=radio] {
   width: 25px;
@@ -217,15 +221,17 @@ label {
 
 .next {
   margin-top: 20px;
-  max-width: 180px; }
+  max-width: 180px;
+  font-size: 20px; }
 
 .orange_text {
-  color: #ff5100;
+  color: #333333;
   font-size: 20px; }
 
 .header__container {
   display: flex;
-  padding-top: 50px; }
+  padding-top: 50px;
+  height: 100vh; }
   @media (max-width: 768px) {
     .header__container {
       flex-direction: column;
@@ -274,10 +280,12 @@ label {
         line-height: 48px; } }
 
 .dynamic__container {
-  display: none; }
+  display: none;
+  height: 50px; }
   .dynamic__container.show {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    height: 100vh; }
     @media (max-width: 768px) {
       .dynamic__container.show {
         flex-direction: column;
@@ -288,6 +296,8 @@ label {
   border: 15px solid #ff008c;
   border-radius: 15px;
   padding: 150px 100px 150px 100px;
+  margin-bottom: 50px;
+  margin-top: 50px;
   background: black; }
   @media (max-width: 1050px) {
     .dynamic__left {
@@ -313,13 +323,18 @@ label {
       padding-top: 20px;
       text-align: center; } }
 
+.queenName {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #ff008c; }
+
 .drag {
   font-family: "Monoton", cursive;
   font-size: 40px;
   color: #ff008c; }
 
 .orange_text2 {
-  color: #ff5100;
+  color: #333333;
   font-size: 30px; }
 
 footer {
@@ -349,7 +364,9 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%; }
+    width: 40%;
+    padding-top: 30px;
+    padding-bottom: 10px; }
     @media (max-width: 480px) {
       footer .flex__child {
         width: 100%;
