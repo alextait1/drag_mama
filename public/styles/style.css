@@ -289,20 +289,16 @@ label {
     @media (max-width: 768px) {
       .dynamic__container.show {
         flex-direction: column;
-        align-items: center; } }
+        align-items: center;
+        height: auto; } }
 
 .dynamic__left {
-  width: calc(40% - 30px);
-  border: 15px solid #ff008c;
-  border-radius: 15px;
-  padding: 150px 100px 150px 100px;
+  width: calc(50% - 30px);
+  padding: 120px 90px 120px 90px;
+  box-shadow: 10px 10px 10px #4d4d4d;
   margin-bottom: 50px;
   margin-top: 50px;
   background: black; }
-  @media (max-width: 1050px) {
-    .dynamic__left {
-      width: calc(50% - 30px);
-      padding: 120px 90px 120px 90px; } }
   @media (max-width: 768px) {
     .dynamic__left {
       padding: 90px 70px 90px 70px;
@@ -321,7 +317,8 @@ label {
     .dynamic__right {
       padding-left: 0;
       padding-top: 20px;
-      text-align: center; } }
+      text-align: center;
+      height: auto; } }
 
 .queenName {
   font-size: 40px;
